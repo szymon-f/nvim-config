@@ -123,7 +123,7 @@ cmp.setup {
     documentation = cmp.config.window.bordered()
   },
   experimental = {
-    ghost_text = true, --displays grey text showing completion 
+    ghost_text = false, --displays grey text showing completion 
     native_menu = false,
   },
 }

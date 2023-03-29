@@ -1,5 +1,6 @@
 local servers = {
 	"pyright",
+  "clangd",
 }
 
 local settings = {
@@ -19,6 +20,13 @@ require("mason").setup(settings)
 require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
+})
+
+-- THIS MAY BREAK STUFF
+require("mason-lspconfig").setup_handlers({
+  function (server_name)
+    require("lspconfig")[server_name].setup {}
+  end
 })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
