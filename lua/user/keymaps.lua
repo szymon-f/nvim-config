@@ -76,5 +76,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- opens file search with previews
 keymap("n", "<leader>p", "<cmd>Telescope find_files <CR>", opts)
---opens file search WITHOUT previews
+-- opens file search WITHOUT previews
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false})) <CR>", opts)
+-- opens grep search
+keymap("n", "<C-t>", "<cmd>Telescope live_grep <CR>", opts)
