@@ -82,6 +82,9 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  -- autopair brackets
+  use "windwp/nvim-autopairs"
+
   -- whichkey
   use "folke/which-key.nvim"
 
