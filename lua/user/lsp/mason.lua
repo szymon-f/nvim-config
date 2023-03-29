@@ -25,10 +25,16 @@ require("mason-lspconfig").setup({
 
 -- THIS MAY BREAK STUFF
 require("mason-lspconfig").setup_handlers({
-  function (server_name)
-    require("lspconfig")[server_name].setup {}
-  end
+  function(server)
+   require("lspconfig")[server].setup({})
+  end,
 })
+
+-- require("mason-lspconfig").setup_handlers({
+  -- function (server_name)
+    -- require("lspconfig")[server_name].setup {}
+  -- end
+-- })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
