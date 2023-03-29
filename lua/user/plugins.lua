@@ -72,6 +72,10 @@ return packer.startup(function(use)
   -- comments
   use "terrortylor/nvim-comment"
 
+  -- telescope
+  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
